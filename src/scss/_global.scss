@@ -1,0 +1,66 @@
+// Container
+.container {
+    max-width: ($containerWidth + $containerPadding) + px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $containerSidePadding + px;
+
+    @media (max-width: $breakpoint1080) {
+        max-width: 864px;
+        padding:  0 20px 0 0;
+    }
+
+    @media (max-width: $breakpoint992) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint768) {
+        max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint480) {
+        max-width: none;
+    }
+}
+
+// Body Locked
+body {
+    font-family: 'DM Sans', sans-serif;
+    &.locked {
+        overflow: hidden;
+    }
+    background: $mainBgColor;
+    
+}
+
+.btn{
+    background: $mainBgColor;
+    border-radius: 90px;
+    padding: 10px 14px;
+    border: 2px solid #E6E8EC;
+    box-sizing: border-box;
+    &:hover{
+        background: $mainActiveColor;
+        color: $mainBgColor;
+        border: 2px solid $mainActiveColor;
+        transition: .3s all ease;
+    }
+    &:focus{
+        background: $mainActiveColor;
+        color: $mainBgColor;
+        border: 2px solid $mainActiveColor;
+        transition: .3s all ease;
+    }
+}
+
+// Animations
+// Fade
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
